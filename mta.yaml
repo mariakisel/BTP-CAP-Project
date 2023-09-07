@@ -55,6 +55,7 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+
   - name: risk-management-auth
     type: org.cloudfoundry.managed-service
     parameters:
@@ -65,3 +66,12 @@ resources:
         oauth2-configuration:
           redirect-uris:
             - https://*.cfapps.us10-001.hana.ondemand.com/login/callback
+        role-collections:
+        - name: 'RiskManager-${space}'
+          description: Manage Risks
+          role-template-references:
+          - $XSAPPNAME.RiskManager
+        - name: 'RiskViewer-${space}'
+          description: View Risks
+          role-template-references:
+          - $XSAPPNAME.RiskViewer
