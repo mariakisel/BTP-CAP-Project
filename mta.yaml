@@ -87,5 +87,5 @@ resources:
     type: org.cloudfoundry.managed-service
     parameters:
       service: destination
-      service-plan: standard
+      service-plan: lite
       service-name: risk-management-mtaext-destination
