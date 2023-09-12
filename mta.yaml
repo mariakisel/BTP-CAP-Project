@@ -82,3 +82,10 @@ resources:
     type: org.cloudfoundry.existing-service
     parameters:
       service-name: risk-management-destination
+
+  - name: risk-management-mtaext-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: standard
+      service-name: risk-management-mtaext-destination
