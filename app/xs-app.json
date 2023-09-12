@@ -9,6 +9,13 @@
     {
       "source": "^/service/(.*)$",
       "destination": "srv-api"
+    },
+    {
+      "source": "^/northwind/(.*)$",
+      "target": "$1",
+      "authenticationType": "none",
+      "destination": "Northwind",
+      "csrfProtection": false
     }
   ]
 }
